@@ -1,0 +1,191 @@
+body{
+    /*
+    https://cssgradient.io/
+
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 57%, rgba(0,212,255,1) 100%);
+    */
+    background-image: url("../images/2.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+}
+/*---Top---*/
+#algorimTop{
+    padding-top: 100px;
+}
+h1 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 5em;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    padding-bottom: 2%;
+}
+/*---Middle---*/
+#algorimMiddle{
+    display: flex;
+    width: 100%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    padding-bottom: 2%;
+}
+#algorimMiddleLeft{
+    width: 60%;
+}
+#algorimMiddleLeftContent{
+    width:70%;
+    margin-left: 25%;
+    font-size: 1.2em;
+}
+
+#algorimMiddleRight{
+    width: 40%;
+    text-align: left;
+}
+#algorimMiddleRight img{
+    width: 70%;
+}
+/*---Bottom---*/
+#algorimBottom{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.algorimBottomBox{
+    width: 20%;
+    border-radius: 10px;
+    background-color:rgba(255, 255, 255, 1);
+    text-align: justify;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 1.1em;
+}
+.algorimBottomBoxTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.algorimBottomBoxTitle h3{
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+.liVisibility{
+    margin-top: 7%;
+}
+#firstLi{
+    margin-top: 0%;
+}
+.liInvisibility{
+    list-style-type: none;
+}
+.algorimBottomBoxLabelButton{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    margin-bottom: 3%;
+}
+.imgNumber{
+    width: 15%;
+}
+
+/*------------------------------RESPONSIVE------------------------------------*/
+
+@media screen and (max-width: 1800px){
+
+    .algorimBottomBox{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 1500px){
+    /*---Bottom---*/
+    #algorimBottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .algorimBottomBox{
+        width: 60%;
+        font-size: 1.1em;
+    }
+    .imgNumber{
+        width: 8%;
+    }
+    .algorimBottomBoxTitle h3{
+        font-size: 1.3em;
+        margin-top: 10px;
+    }
+    .liVisibility{
+        margin-top: 2%;
+    }
+    .algorimBottomBoxLabelButton{
+        height: 50px;
+        margin-bottom: 0.5%;
+    }
+
+    #algorimMiddle{
+        flex-direction: column;
+        align-items: center;
+    }
+    #algorimMiddleLeft{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #algorimMiddleLeftContent{
+        width: 90%;
+        margin-left: 0px;
+    }
+    #algorimMiddleLeftContent p{
+        text-align: justify;
+    }
+    #algorimMiddleRight{
+        width: 100%;
+        text-align: center;
+    }
+    #algorimMiddleRight img{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1300px){
+
+    .algorimBottomBox{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .algorimBottomBoxLabelButton{
+        height: 80px;
+        margin-bottom: 0.5%;
+    }
+    #algorimMiddleRight{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .imgNumber{
+        width: 50px;
+    }
+    h1 {
+        font-size: 3.5em;
+    }
+    #algorimMiddle{
+        font-size: 0.9em;
+    }
+
+    .algorimBottomBoxLabelButton{
+        margin-bottom: 4%;
+    }
+}
