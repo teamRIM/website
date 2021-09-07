@@ -45,7 +45,9 @@ body{
     padding: 0px;
     color: black;
 }
-
+.sectionTop{
+    padding-top: 70px;
+}
 .learnMoreButton{
     text-decoration: none;
     text-transform: uppercase;
@@ -71,5 +73,18 @@ body{
     text-transform: uppercase;
 }
 .importantButton:hover{
+    background-color: #6b65a7;
+}
+
+#importantButton{
+    text-decoration: none;
+    background-color: #393183;
+    padding: 0.6em;
+    font-size: 1.1em;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+#importantButton:hover{
     background-color: #6b65a7;
 }

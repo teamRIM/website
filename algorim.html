@@ -12,78 +12,187 @@
     <link rel="stylesheet" href="css/algorim.css" type="text/css" media="screen" />
 
     <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-buddha" title="Pixel Buddha">Pixel Buddha</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+            var page = $(this).attr('href'); // Page cible
+            var speed = 750; // Durée de l'animation (en ms)
+            $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+            return false;
+          });
+        });
+    </script>
 
 </head>
 <nav>
     <div class="navBar">
         <ul>
-            <li><a class="js-scrollTo" href="index.html">Home</a></li>
-            <li><a class="js-scrollTo" href="team.html">Team</a></li>
-            <li><a class="js-scrollTo" href="contact.html">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 </nav>
 
 <body>
-    <section id="algorimTop">
-        <h1>AlgoRIM</h1>
-    </section>
-    <section id="algorimMiddle">
-        <div id="algorimMiddleLeft">
-            <div id="algorimMiddleLeftContent">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex perferendis tempore velit deserunt. Non numquam temporibus id minus in molestias aut possimus beatae, veniam ex adipisci necessitatibus fugiat voluptatem esse?</p>
+    <section id="algorimPage1" class="algorimPage">
+        <section class="sectionTop">
+            <h1>AlgoRIM</h1>
+        </section>
+        <section id="algorimMiddle">
+            <div id="algorimMiddleLeft">
+                <div id="algorimMiddleLeftContent">
+                    <p>AlgoRIM is an image reconstruction algorithm for fluorescence microscopy. This algorithm was implemented using a statistical numerical method, based on statistical data of order two (variance or short-range correlation), specially optimized to generate these super-resolved images.</p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Lorem ipsum dolor sit amet</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex perferendis tempore velit deserunt. Non numquam temporibus id minus in molestias aut possimus beatae, veniam ex adipisci necessitatibus fugiat voluptatem esse?</p>
+                </div>
+            </div>
+            <div id="algorimMiddleRight">
+                <img src="images/algoRim.PNG">
+            </div>
+        </section>
+        <section id="algorimBottom">
+            <div class="algorimBottomBox">
+                <div class="algorimBottomBoxTitle">
+                    <img class="imgNumber" src="images/one.png">
+                    <h3>Prerequisite to install AlgoRIM interface</h3>
+                </div>
                 <ul>
-                    <li>Lorem ipsum dolor sit amet</li>
-                    <li>Lorem ipsum dolor sit amet</li>
-                    <li>Lorem ipsum dolor sit amet</li>
+                    <li id="firstLi" class="liVisibility">Internet connection</li>
+                    <li class="liVisibility">Administrator rights on the computer</li>
+                    <li class="liInvisibility">(In some instances the antivirus try to prevent the installation)</li>
+                    <li class="liVisibility">Windows operating system</li>
+                    <li class="liInvisibility">(Tested on : Windows 10)</li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex perferendis tempore velit deserunt. Non numquam temporibus id minus in molestias aut possimus beatae, veniam ex adipisci necessitatibus fugiat voluptatem esse?</p>
             </div>
-        </div>
-        <div id="algorimMiddleRight">
-            <img src="images/algoRim.PNG">
-        </div>
+            <div class="algorimBottomBox">
+                <div class="algorimBottomBoxTitle">
+                    <img class="imgNumber" src="images/two.png">
+                    <h3>Conditions of use</h3>
+                </div>
+                <p>You are free to use this software for research purposes only, but you must not transmit and distribute it without our consent (See contacts list).</p>
+                <p>In addition, you undertake to include a citation whenever you present or publish results that are based on it: </p><i> Mangeat et al., Super-resolved live-cell imaging using random illumination microscopy, Cell Reports Methods (2021) <a href="https://doi.org/10.1016/j.crmeth.2021.100009" target="_blank">https://doi.org/10.1016/j.crmeth.2021.100009</a></i>
+                <p>The CNRS makes no warranties of any kind on this software and shall in no event be liable for damages of any kind in connection with the use and exploitation of this technology.</p>
+            </div>
+            <div class="algorimBottomBox">
+                <div class="algorimBottomBoxTitle">
+                    <img class="imgNumber" src="images/three.png">
+                    <h3>Download</h3>
+                </div>
+                <div class="algorimBottomBoxContent">
+                    <div class="algorimBottomBoxLabelButton"><p>Latest version AlgoRIM V1.1 (20/04/21)</p></div>
+                    <a class="importantButton" href="https://github.com/teamRIM/tutoRIM/raw/main/bin/AlgoRIM_V1_1_2_installer.exe" title="Contact">Download</a>
+                </div>
+            </div>
+            <div class="algorimBottomBox">
+                <div class="algorimBottomBoxTitle">
+                    <img class="imgNumber" src="images/four.png">
+                    <h3>Tutorial</h3>
+                </div>
+                <div class="algorimBottomBoxContent">
+                    <div class="algorimBottomBoxLabelButton"><p>Discover step by step how the interface works and test it with our datasets.</p></div>
+                    <a  class="js-scrollTo" id="importantButton" href="#algorimPage2">See tutorial</a>
+                    </br>
+                    <a href="tutoRIM.pdf" target="_blank">Download PDF</a>
+                </div>
+            </div>
+        </section>
     </section>
-    <section id="algorimBottom">
-        <div class="algorimBottomBox">
-            <div class="algorimBottomBoxTitle">
-                <img class="imgNumber" src="images/one.png">
-                <h3>Prerequisite to install AlgoRIM interface</h3>
-            </div>
+    <section id="algorimPage2" class="algorimPage">
+
+        <section class="sectionTop">
+            <h2>Example of use with our dataset</h2>
+        </section>
+        <section class="listBox">
+            <h3>1. Download</h3>
             <ul>
-                <li id="firstLi" class="liVisibility">Internet connection</li>
-                <li class="liVisibility">Administrator rights on the computer</li>
-                <li class="liInvisibility">(In some instances the antivirus try to prevent the installation)</li>
-                <li class="liVisibility">Windows operating system</li>
-                <li class="liInvisibility">(Tested on : Windows 10)</li>
+                <li>First of all, start the download of AlgoRIM. If this is your first time installation this operation may take several minutes. Don't forget to add a shorcut to your desktop.</li>
+                <li>On your computer, create a folder named 'AlgoRIM_Dataset' and a subfolder named 'RAW_DATA' in it.</li>
+                <li>Click on this link to see our <a href="https://github.com/teamRIM/tutoRIM/tree/main/data" target="_blank">dataset</a></li>
+                <li>Download PSF files in 'AlgoRIM_Dataset' folder and ROI1_SUM_image_43_800.tif in 'RAW_DATA' folder.</li>
+                <li>Once your installation is complete, open AlgoRIM interface.</li>
             </ul>
-        </div>
-        <div class="algorimBottomBox">
-            <div class="algorimBottomBoxTitle">
-                <img class="imgNumber" src="images/two.png">
-                <h3>Conditions of use</h3>
-            </div>
-            <p>You are free to use this software for research purposes only, but you must not transmit and distribute it without our consent (See contacts list).</p>
-            <p>In addition, you undertake to include a citation (XXXXX XXXXXXXXXXX XXXXXX XXXXXXXXXXX XXXXXX XXXX) whenever you present or publish results that are based on it.</p>
-            <p>The CNRS makes no warranties of any kind on this software and shall in no event be liable for damages of any kind in connection with the use and exploitation of this technology.</p>
-        </div>
-        <div class="algorimBottomBox">
-            <div class="algorimBottomBoxTitle">
-                <img class="imgNumber" src="images/three.png">
-                <h3>Download</h3>
-                <div class="algorimBottomBoxLabelButton"><p>Latest version AlgoRIM V1.1 (20/04/21)</p></div>
-                <a class="importantButton" href="https://github.com/teamRIM/tutoRIM/raw/main/bin/AlgoRIM_V1_1_2_installer.exe" title="Contact">Download</a>
-            </div>
-        </div>
-        <div class="algorimBottomBox">
-            <div class="algorimBottomBoxTitle">
-                <img class="imgNumber" src="images/four.png">
-                <h3>Tutorial</h3>
-                <div class="algorimBottomBoxLabelButton"><p>Discover step by step how the interface works and test it with our datasets.</p></div>
-                <a class="importantButton" href="tutorim.html">See tutorial</a>
-            </div>
-        </div>
+            <h3>2. Adjust parameters</h3>
+            <ul>
+                <li><b>Images from:</b> Click on 'Other'.</li>
+                <li><b>Input data:</b> Raw data folder is selected.</li>
+                <li><b>Select:</b> Select 'RAW_DATA' folder.</li>
+                <li><b>PSF emission:</b> Select PSF256_520nm.tif.</li>
+                <li><b>PSF excitation:</b> Select PSF256_405nm.tif.</li>
+                <li><b>Image expansion factor:</b> 2</li>
+                <li><b>PSF expansion factor:</b> 1</li>
+                <li><b>Regularization parameter:</b> 0</li>
+                <li><b>Number of iterations:</b> 16</li>
+                <li><b>Pre-filtering parameter:</b> 0.008. You can click on the 'Adjust' button to adjust it.</li>
+            </ul>
+            <h3>3. Launch preview and reconstruction</h3>
+            <ul>
+                <li>You can click on 'Launch preview' button. Use the 'STOP' button if you don't want to wait until the end of the iterations.</li>
+                <li>Click on 'Launch' button.</li>
+                <li>This will create a reconstruction folder in your 'RAW_DATA' folder, with the reconstructed image in it.</li>
+            </ul>
+            <div class="listBoxButton"><a class="js-scrollTo" id="importantButton" href="#algorimPage3">Next</a></div>
+        </section>
     </section>
+
+    <section  id="algorimPage3" class="algorimPage">
+
+        <section class="sectionTop">
+            <h2>How to use AlgoRIM interface</h2>
+        </section>
+        <section class="listBox">
+
+            <h3>1. Specify where your data comes from</h3>
+            <p class="subtitle">Allow the interface to be able to identify and differentiate your channels.</p>
+            <ul>
+                <li>If you select <b>Other</b>: No prerequisite on the name of the channels but they will not be differentiated during reconstruction. You can create a subfolder for each channel and reconstructed them separately.</li>
+                <li><b>Inscoper:</b> channel 0 is identify with 'c0' in the image name and channel 1 with 'c1'</li>
+                <li><b>Abbelight:</b> the image name begins with 'ROI2' or 'ROI1', depending on the channel</li>
+            </ul>
+
+            <h3>2. Input data</h3>
+            <p class="subtitle">Select the type of the input data folder</p>
+            <ul>
+                <li>Raw data folder: Launch reconstruction on one folder containning .tif files.</li>
+                <li>Global folder: Launch several reconstructions in a row by selecting a folder containing several projects.
+                    It is based on Inscoper's raw image backup mode: global_folder/sub_folder/images/RAW_DATA/. If you want you launch preview, you need to select precisely the raw data folder you want to launch preview on.</li>
+            </ul>
+
+            <h3>3. Select folder</h3>
+            <ul>
+                <li>This folder must contain one or more stack of n raw speckle.</li>
+                <li>This folder must contain images in .tif format and square.</li>
+            </ul>
+
+            <h3>4. Adjust parameters</h3>
+            <h4>Over-sampling factor:</h4>
+            <p>Raw images are usually recorded with a pixel-size about lambda/(4xNA), with lambda the wavelength of the emitted light and NA the numerical aperture of the objective. The super-resolved reconstruction should be discretized with a smaller pixel size. The over-sampling factor is the ratio between the pixel size of the raw images and the pixel size of the reconstructed (super-resolved) image, e.g., 2 will produce an output/reconstructed image with a pixel size that is half the native pixel size of the raw data.</p>
+            <p>Remark: the reconstruction code is based on Fast Fourier Transforms, which are faster if the number of pixels along any direction is a power of 2 (128, 256, 512, etc.). Of course this is not mandatory. Images must be square.</p>
+
+            <h4>Collection PSF:</h4>
+            <p>PSF of the objective with respect to the collected light (emitted by the fluorophores). This PSF can be estimated experimentally or generated theoretically with a free software like 'PSF generator'.</p>
+            <p>The PSF file should be provided in .tif format and the maximum of the PSF should be at the center of the image. Beware that this image should be provided with a pixel size corresponding to that of the super-resolved/reconstructed image.</p>
+
+            <h4>Excitation PSF:</h4>
+            <p>PSF of the objective with respect to the illlumination light. This PSF corresponds to the autocorrelation of the speckle; it can be generated with a free software like 'PSF generator'. Note that this PSF is not affected by any aberration.</p>
+            <p>The PSF file should be provided in .tif format and the maximum of the PSF should be at the center of the image. This image should be provided with a pixel size corresponding to that of the super-resolved/reconstructed image.</p>
+
+            <h4>Number of iterations:</h4>
+            <p>Number of iterative updates in the variance matching algorithm. The early stopping of the iterative scheme is producing a Tikhonov-like regularization of the reconstruction. You can adjust this setting with the preview mode showing the progression of the reconstructed image over the course of the algorithm.</p>
+
+            <h4>Pre-filtering parameter:</h4>
+            <p>Each raw image is deconvolved using a Wiener filtering. You can adjust this parameter with the adjust button in the preview mode.</p>
+
+            <div class="listBoxButton"><a  class="js-scrollTo" id="importantButton" href="#algorimPage1">Up</a></div>
+        </section>
+    </section>
+
 
 </body>
 </html>

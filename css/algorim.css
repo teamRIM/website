@@ -1,18 +1,17 @@
 body{
-    /*
-    https://cssgradient.io/
-
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 57%, rgba(0,212,255,1) 100%);
-    */
-    background-image: url("../images/2.jpg");
+   /* background-image: url("../images/2.jpg");
     background-repeat: repeat;
-    background-size: cover;
+    background-size: cover;*/
 }
+
+.algorimPage{
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(112,170,255,1) 100%);
+    min-height: 100%;
+}
+
 /*---Top---*/
-#algorimTop{
-    padding-top: 100px;
-}
+
 h1 {
     color: white;
     font-family: 'Raleway', sans-serif;
@@ -26,7 +25,7 @@ h1 {
 #algorimMiddle{
     display: flex;
     width: 100%;
-    color: white;
+    /*color: white;*/
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     padding-bottom: 2%;
@@ -45,7 +44,7 @@ h1 {
     text-align: left;
 }
 #algorimMiddleRight img{
-    width: 70%;
+    width: 65%;
 }
 /*---Bottom---*/
 #algorimBottom{
@@ -66,6 +65,12 @@ h1 {
     font-size: 1.1em;
 }
 .algorimBottomBoxTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.algorimBottomBoxContent{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,12 +101,73 @@ h1 {
     width: 15%;
 }
 
+/*------------------------------------------------------------- PAGE 2 & 3 ----------------------------------------------------*/
+h2 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 4em;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    padding-bottom: 1.5%;
+}
+h3{
+    font-size: 1.5em;
+    margin-bottom: 0px;
+    margin-top: 2.5%;
+}
+ul{
+    margin-bottom: 0px;
+}
+
+.subtitle{
+    font-style: italic;
+    margin-top: 0.5%;
+    margin-bottom: 3%;
+}
+h4{
+    margin-bottom: 0px;
+}
+
+.listBox {
+    margin: auto;
+    width: 40%;
+    background-color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.listBox li{
+    margin-bottom: 1%;
+    text-align: justify;
+}
+
+p{
+    text-align: justify;
+}
+
+.listBoxButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
 /*------------------------------RESPONSIVE------------------------------------*/
 
 @media screen and (max-width: 1800px){
 
     .algorimBottomBox{
         font-size: 1em;
+    }
+}
+@media screen and (max-width: 1600px){
+
+    #algorimMiddleRight img{
+        width: 80%;
     }
 }
 
@@ -131,6 +197,22 @@ h1 {
         margin-bottom: 0.5%;
     }
 
+    #algorimMiddleRight img{
+        width: 85%;
+    }
+    .listBox {
+        width: 50%;
+    }
+    #algorimMiddleLeft{
+        width: 60%;
+    }
+    #algorimMiddleLeftContent{
+        width:80%;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 1300px){
     #algorimMiddle{
         flex-direction: column;
         align-items: center;
@@ -154,13 +236,12 @@ h1 {
     #algorimMiddleRight img{
         width: 50%;
     }
-}
-
-@media screen and (max-width: 1300px){
-
     .algorimBottomBox{
         width: 80%;
     }
+    .listBox {
+        width: 60%;
+      }
 }
 
 @media screen and (max-width: 800px){
@@ -172,6 +253,9 @@ h1 {
     #algorimMiddleRight{
         display: none;
     }
+    .listBox {
+        width: 80%;
+      }
 }
 
 @media screen and (max-width: 600px){
@@ -181,10 +265,12 @@ h1 {
     h1 {
         font-size: 3.5em;
     }
+    h2{
+        font-size: 3em;
+    }
     #algorimMiddle{
         font-size: 0.9em;
     }
-
     .algorimBottomBoxLabelButton{
         margin-bottom: 4%;
     }
